@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'two';
+  users!:any;
+  receivedData(para:any){
+this.users=para;
+console.log('parantdata'+para.name);
+  }
 }

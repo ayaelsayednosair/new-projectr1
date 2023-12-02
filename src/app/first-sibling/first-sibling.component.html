@@ -1,0 +1,48 @@
+<p>first-sibling works!</p>
+<p>Number of Employees:{{name.length}}</p>
+
+<div class="input-container">
+
+  <label>{{ one }}</label><br />
+  <input type="text" name="name" [(ngModel)]="name" id="name" /><br />
+  <label>{{ two }}</label><br />
+  <input type="text" name="username" id="username" [(ngModel)]="username" /><br />
+  <label>{{ three }}</label><br />
+  <input type="text" name="email" id="email" [(ngModel)]="email" /><br />
+  <!-- <div class="d-grid gap-2  mx-auto">
+    <button type="button" class="btn btn-primary  my-3" value="Add" (click)="onclick($event)">Add users</button>
+  </div> -->
+</div>
+<div class="d-grid gap-2 ">
+  <button type="button" class="btn btn-primary  my-3" value="Add" (click)="onclick($event)">Add users</button>
+</div>
+<br />
+
+<div class="col-xl-6 col-12 recent ">
+  <table class="table table-light table-hover text-center">
+    <thead>
+      <tr class="text-muted">
+        <th>#</th>
+        <th>Name</th>
+        <th>username</th>
+        <th>Email</th>
+        <th colspan="3">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listData; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.username }}</td>
+        <td>{{ item.email}}</td>
+        <td>
+          <button type="button" class="btn btn-danger btn-sm" (click)="remove(i)">
+            Delete
+          </button>
+        </td>
+        <td> <button class="btn btn-dark float-end" (click)="userstrans(item)">view</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

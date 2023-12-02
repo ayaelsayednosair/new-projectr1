@@ -1,0 +1,21 @@
+input{
+border-radius: 5px;
+border: rgb(105, 100, 100) 2px solid;
+color: rgb(122, 113, 113);
+width: 50%;
+padding: 10px;
+ font-size: 16px;
+
+}
+
+.input-container {
+display: grid;
+justify-items: center;
+text-align: start;
+margin-bottom: 20px;
+}
+.recent{
+  margin-top: 10px;
+  width: 100%;
+
+  }
